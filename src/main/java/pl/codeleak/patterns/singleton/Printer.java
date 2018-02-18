@@ -9,6 +9,12 @@ class Printer {
 
     private int printCount;
 
+    private static final Printer INSTANCE = new Printer();
+
+    public static Printer getInstance() {
+        return INSTANCE;
+    }
+
     void print(String message) {
         LOG.info("Printed: {}, Count: {}", message, ++this.printCount);
     }

@@ -9,14 +9,14 @@ class OfficeAssistanceApp {
         System.out.println(LocalDateTime.now());
 
         // Possible arguments
-        String[] printArgs = new String[]{"print", "Hello World!"};
-        // String[] faxArgs = new String[]{"fax", "0048543-34-34", "Hello World!"};
-        // String[] emailArgs = new String[]{"email", "demo@example.com", "Hello World!"};
+//        String[] _args = new String[]{"print", "Hello World!"};
+//         String[] _args = new String[]{"fax", "0048543-34-34", "Hello World!"};
+         String[] _args = new String[]{"email", "demo@example.com", "Hello World!"};
 
         OfficeManagement officeManagement = new OfficeManagement();
 
         // TODO Depending on the args create a command
-        OfficeCommand officeCommand = null;
+        OfficeCommand officeCommand = OfficeCommandFactory.createCommand(_args);
 
         // TODO Execute the command
         officeCommand.execute(officeManagement);
