@@ -5,7 +5,7 @@ class PrinterObserverApp {
     public static void main(String[] args) {
         Printer printer = new Printer();
 
-        // TODO Register observers with printer
+        // TODO dodanie obserwatorów do obiektu printer
 
         printer.addObserver(null);
         printer.addObserver(null);

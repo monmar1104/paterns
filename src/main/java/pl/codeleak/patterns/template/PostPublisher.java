@@ -3,7 +3,7 @@ package pl.codeleak.patterns.template;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-// TODO Make this class a Template (should be abstract, no constructor argument is needed anymore)
+// TODO klasa niech zotanie szablonem (powinna być abstrakcyjna)
 class PostPublisher {
 
     private static final Logger LOG = LoggerFactory.getLogger(PostPublisher.class);
@@ -22,25 +22,22 @@ class PostPublisher {
         return where.equals("Instagram");
     }
 
-    // Template method (do not change)
+    // szablonowa metoda, powinna zostać w takiej formie
     void postIt(Post post) {
-        // Algorithm steps
         if (logIn()) {
             doPostIt(post);
             logOut();
         }
     }
 
+    //poniższe metody powinny być abstrakcyjne, a ich implementacja przeniesiona do odpowiednich klas
     boolean logIn() {
-
-        // TODO Facebook login logic goes to FacebookPostPublisher
         if (isFacebook()) {
             // Facebook logging-in
             LOG.info("Logging in Facebook ...");
             return true;
         }
 
-        // TODO Instagram login logic goes to InstagramPostPublisher
         if (isInstagram()) {
             LOG.info("Logging in Instagram ...");
             return true;
@@ -50,32 +47,25 @@ class PostPublisher {
     }
 
     void doPostIt(Post post) {
-        // TODO Posting logic goes to FacebookPostPublisher
         if (isFacebook()) {
             // Facebook logging-in
             LOG.info("Posting in Facebook ...");
         }
 
-        // TODO Posting logic goes to InstagramPostPublisher
         if (isInstagram()) {
             LOG.info("Posting in Instagram ...");
         }
     }
 
-
-
     void logOut() {
-        // TODO Facebook logout logic goes to FacebookPostPublisher
         if (isFacebook()) {
             // Facebook logging-in
             LOG.info("Logging in Facebook ...");
         }
 
-        // TODO Instagram logout logic goes to InstagramPostPublisher
         if (isInstagram()) {
             LOG.info("Logging in Instagram ...");
         }
     }
-
 }
 

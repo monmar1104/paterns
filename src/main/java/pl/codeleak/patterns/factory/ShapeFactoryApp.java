@@ -3,9 +3,9 @@ package pl.codeleak.patterns.factory;
 class ShapeFactoryApp {
 
     public static void main(String[] args) {
-        // TODO Create specific shapes depending on the given shape types.
-        // TODO Print each shape at random location.
-        // TODO (Optional) Track count of instances created for each shape type
+        // TODO Stwórz konkretne typy na podstawie interfejsy Shape
+        // stwórz fabrykę obiektów typu Shape
+        // wypisz je w losowej lokalizacji
         String[] shapesTypes = new String[]{"circle", "triangle", "triangle", "rectangle", "rectangle", "rectangle"};
     }
 }

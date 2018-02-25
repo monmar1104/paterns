@@ -8,17 +8,17 @@ class OfficeAssistanceApp {
 
         System.out.println(LocalDateTime.now());
 
-        // Possible arguments
+        // Możliwe argumenty
         String[] printArgs = new String[]{"print", "Hello World!"};
         // String[] faxArgs = new String[]{"fax", "0048543-34-34", "Hello World!"};
         // String[] emailArgs = new String[]{"email", "demo@example.com", "Hello World!"};
 
         OfficeManagement officeManagement = new OfficeManagement();
 
-        // TODO Depending on the args create a command
+        // TODO obiekt officeCommand zależny od parametrów
         OfficeCommand officeCommand = null;
 
-        // TODO Execute the command
+        // TODO wykonanie czynności jako obiekt
         officeCommand.execute(officeManagement);
     }
 }

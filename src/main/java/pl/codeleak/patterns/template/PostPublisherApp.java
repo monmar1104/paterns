@@ -3,15 +3,18 @@ package pl.codeleak.patterns.template;
 public class PostPublisherApp {
 
     public static void main(String[] args) {
+        // TODO stwórz obiekty konkretnego typu i wykonaj na nich operację postIt
 
-        // TODO Refactor so that FacebookPostPublisher can be used here
-        PostPublisher facebookPostPublisher = new PostPublisher("Facebook");
-        facebookPostPublisher.postIt(new Post());
+        // FIXME
+//        Post post = new Post("message");
 
-        // TODO Refactor so that InstagramPostPublisher can be used here
-        PostPublisher instagramPostPublisher = new PostPublisher("Instagram");
-        instagramPostPublisher.postIt(new Post());
+        //FIXME
+//        PostPublisher facebookPostPublisher = new FacebookPostPublisher();
+//        facebookPostPublisher.postIt(post);
 
+        // FIXME
+//        PostPublisher instagramPostPublisher = new InstagramPostPublisher();
+//        instagramPostPublisher.postIt(post);
 
     }
 }
