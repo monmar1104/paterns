@@ -3,6 +3,8 @@ package pl.codeleak.patterns.singleton;
 class PrintingApp {
 
     public static void main(String[] args) {
+        //TODO
+        //przerobić program tak, aby korzystał z klasy Printer jako singleton (sumował wystąpienia w polu 'count')
 
         PrintHouse printHouse = new PrintHouse();
 

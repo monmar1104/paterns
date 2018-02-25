@@ -3,17 +3,13 @@ package pl.codeleak.patterns.strategy;
 class PrintingApp {
 
     public static void main(String[] args) {
+        // TODO stworzyć różne strategie wypisania (np. logger, console)
 
-        // TODO Create different printing strategies (e.g. logger, console, file)
-
-        PrintHouse printHouse = new PrintHouse(null);
+        PrintHouse printHouse = new PrintHouse(new LoggerStrategy());
         printHouse.print("Test using logging printing strategy");
 
-        printHouse.setStrategy(null);
+        printHouse.setStrategy(new ConsoleStrategy());
         printHouse.print("Test using console printing strategy");
-
-        printHouse.setStrategy(null);
-        printHouse.print("Test using file printing strategy");
     }
 }
 

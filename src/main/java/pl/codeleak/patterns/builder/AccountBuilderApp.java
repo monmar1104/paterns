@@ -5,10 +5,10 @@ import java.time.LocalDateTime;
 public class AccountBuilderApp {
 
     public static void main(String[] args) {
-        // TODO Create a builder that constructs different account representations:
-        // one with only required fields set
-        // second with optional name set too
-        // third with all fields set
+        // TODO stwórz builder, który zbuduje różne reprezentacje obiektu account:
+        // - tylko wymagane pola (oznaczone jako final)
+        // - wymagane + pole name
+        // - wszystkie pola obiektu
 
         Account accountWithRequiredFields = Account.newBuilder("mail", "Password")
                 .build();

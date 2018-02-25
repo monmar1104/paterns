@@ -1,14 +1,26 @@
 package pl.codeleak.patterns.observer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Printer {
+
+    private List<PrinterObserver> observers = new ArrayList<>();
 
     private int printCount = 0;
 
     void addObserver(PrinterObserver printerObserver) {
-        // TODO Implement
+        if (observers.contains(printerObserver)) {
+            return;
+        }
+        observers.add(printerObserver);
     }
 
     void print(String message) {
-        // TODO Print and notify all observers. Observers should receive the message printed and the current print count
+        System.out.println(message);
+        printCount++;
+        for (PrinterObserver observer : observers) {
+            observer.messagePrinted(message, printCount);
+        }
     }
 }
